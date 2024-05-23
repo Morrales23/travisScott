@@ -1,0 +1,143 @@
+body {
+    background-color: black;
+
+}
+
+.image-container {
+    display: flex;
+    align-items: center; /* Centrar vertical */
+    justify-content: center; /* Centrar horizontal */
+    height: 85vh;
+    overflow: hidden; /* Para ocultar el desbordamiento de la imagen */
+}
+
+.imagenprin {
+    max-width: 100%; /* Ajustar tamaño máximo */
+    transition: transform 0.2s ease-out; /* Transición suave para el movimiento */
+    max-width: 70%;
+    max-height: 70%;
+}
+
+
+.container-buttons {
+    display: flex;
+    justify-content: center; /* Centrar horizontal */
+    
+}
+.button1{
+    font-size: 10px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
+
+}
+
+
+.buttons-container{
+    display: flex;
+    justify-content: center; /* Centrar horizontal */
+    position: absolute;
+    margin-top: 530px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.button2{
+    color: aliceblue;
+    font-size: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius:  5px;
+
+}
+
+
+.button a {
+    display: flex;
+    justify-content: center; /* Centrar horizontal */
+    position: fixed;
+    margin-bottom: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999
+    
+}
+
+.button .ima img {
+    width: 60px;
+    height: 60px;
+}
+
+.table-container {
+    display: flex;
+    align-items: center; /* Centrar vertical */
+    justify-content: center; /* Centrar horizontal */
+    height: 75vh;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+   
+  }
+  
+  th, td {
+    border-bottom: .5px solid #5c5656;
+    padding: 8px;
+    text-align: left;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+  }
+  
+  th {
+    color:gray ;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+
+/* Estilos para ocultar inicialmente los botones */
+.button-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.852); /* Fondo oscuro translúcido */
+    padding: 100%;
+    border-radius: 10px;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.button-container button {
+    display: block;
+    width: 100%;
+    margin: 40px 0;
+    padding: 7px 35px ;
+    color: #fff;
+    backdrop-filter: blur(5px);
+    background-color: rgba(68, 67, 67, 0); /* Fondo transparente */
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 0 0.5px rgba(244, 241, 241, 0.5); /* Borde blanco de .5 */
+    cursor: pointer;
+    font-size: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; 
+    white-space: nowrap;
+}
+
+.button-container button:hover {
+    background-color: #555;
+}

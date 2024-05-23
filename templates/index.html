@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Travis Scott</title>
+    <style>
+        /* Estilo para ocultar los botones inicialmente */
+        .button-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-buttons">
+        <a class="button1" href="/shop">SHOP</a>
+    </div>
+
+    <div class="image-container">
+        <img class="imagenprin" src="static/images/circusmaximus.png" alt="">
+
+        <div class="buttons-container">
+            <p class="button2">CIRCUS MAXIMUS TOUR</p>
+        </div>
+    </div>
+
+    <div class="button">
+        <a class="ima" href="#" id="toggle-buttons"><img src="static/images/boton.png" alt=""></a>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>CITY</th>
+                    <th>VENUE</th>
+                    <th>TICKETS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JUNE 28</td>
+                    <td>ARNHEM, NETHERLANDS</td>
+                    <td>GELRE DOME</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 2</td>
+                    <td>KRAKOW, POLAND</td>
+                    <td>TAURON ARENA</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 4</td>
+                    <td>ZURICH, SWITZERLAND</td>
+                    <td>HALLENSTADION</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 6</td>
+                    <td>NICE, FRANCE</td>
+                    <td>ALLIANZ RIVIERA</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 7</td>
+                    <td>VIENNA, AUSTRIA</td>
+                    <td>ROLLING LOUD EUROPE</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 9</td>
+                    <td>ANTWERP, BELGIUM</td>
+                    <td>SPORTPALEIS</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 11</td>
+                    <td>LONDON, UK</td>
+                    <td>TOTTENHAM HOTSPUR STADIUM</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 13</td>
+                    <td>MANCHESTER, UK</td>
+                    <td>CO-OP LIVE</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 14</td>
+                    <td>CONSTINESTI, ROMANIA</td>
+                    <td>BEACH PLEASE</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 16</td>
+                    <td>HAMBURG, GERMANY</td>
+                    <td>BARCLAYS ARENA</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 18</td>
+                    <td>PRAGUE, CZECH REPUBLIC</td>
+                    <td>O2 ARENA</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 20</td>
+                    <td>COLOGNE, GERMANY</td>
+                    <td>RHEIN ENERGIE STADION</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 23</td>
+                    <td>MILAN, ITALY</td>
+                    <td>IPPODROMO SNAI LA MAURA</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+                <tr>
+                    <td>JULY 27</td>
+                    <td>FRANKFURT, GERMANY</td>
+                    <td>DEUTSCHE BANK PARK</td>
+                    <td><a href="#">TICKETS</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="button-container">
+        <button class="open-modal" data-modal="modal1">TOUR</button>
+        <button class="open-modal" data-modal="modal2">UTOPIA WORLD</button>
+        <button class="open-modal" data-modal="modal3">UTOPIA SHOP</button>
+        <button class="open-modal" data-modal="modal4">UTOPIA ALBUM</button>
+    </div>
+    
+    <script>
+        // JavaScript para alternar la visibilidad de los botones al hacer clic en el botón de la imagen
+        document.getElementById('toggle-buttons').addEventListener('click', function(event) {
+            event.preventDefault(); // Previene que el enlace navegue a otra página
+            const buttonContainer = document.querySelector('.button-container');
+            if (buttonContainer.style.display === 'none' || buttonContainer.style.display === '') {
+                buttonContainer.style.display = 'block';
+            } else {
+                buttonContainer.style.display = 'none';
+            }
+        });
+        $(document).ready(function() {
+          $('.imagenprin').mousemove(function(event) {
+              var containerWidth = $(this).width();
+              var containerHeight = $(this).height();
+              var mouseX = event.pageX - $(this).offset().left;
+              var mouseY = event.pageY - $(this).offset().top;
+              
+              var moveX = (mouseX - containerWidth / 2) / containerWidth * 20; // 20 es el factor de movimiento
+              var moveY = (mouseY - containerHeight / 2) / containerHeight * 20;
+              
+              $(this).css('transform', 'translate(' + moveX + 'px, ' + moveY + 'px)');
+          });
+          
+          $('.imagenprin').mouseleave(function() {
+              $(this).css('transform', 'translate(0, 0)');
+          });
+      });
+    </script>
+
+</body>
+</html>
